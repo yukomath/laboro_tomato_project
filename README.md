@@ -61,6 +61,7 @@ A custom `TomatoDataset` class handles:
 - Classification and mask heads modified for 6 ripeness classes
 
 ### Training
+- Training is performed for **10 epochs**.
 - Optimizer: SGD with momentum and weight decay
 - Learning rate scheduler: StepLR
 - Checkpointing system to resume training and save the best-performing model
