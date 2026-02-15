@@ -167,9 +167,8 @@ Area ratios are computed relative to the resized image resolution (800 × 800 = 
 
 ### Observations
 - The model performs well on **medium and large tomatoes**.
-- Performance on **small objects** is significantly lower, particularly for cherry tomatoes.
-- This indicates that **small bounding box detection remains a key challenge** and an important area for future improvement.
-  
+- Performance on **small objects** is significantly lower, particularly for cherry tomatoes.　However, since small objects occupy only a very small fraction of the image, for the purpose of building a model to classify ripeness, this limitation can be considered minor and may be ignored for now.
+- Small bounding box detection remains a challenge for future improvement if the model is to be extended to fine-grained size or variety classification.  
 
 ## 3. Visual Check
 **Notebook:** <a href="https://colab.research.google.com/drive/16I_pJ5Baph34w2O2cy7T77NDGboPzF7s">
