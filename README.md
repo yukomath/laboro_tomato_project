@@ -172,14 +172,28 @@ Area ratios are computed relative to the resized image resolution (800 × 800 = 
   
 
 ## 3. Visual Check
-<a href="https://colab.research.google.com/drive/16I_pJ5Baph34w2O2cy7T77NDGboPzF7s">
+**Notebook:** <a href="https://colab.research.google.com/drive/16I_pJ5Baph34w2O2cy7T77NDGboPzF7s">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" />
 </a>
 
-This notebook provides a visual inspection of the model predictions:
-Displays sample images from test set.
-Overlays predicted bounding boxes and masks with confidence scores.
-Allows quick qualitative verification of model performance.
+This notebook performs a qualitative inspection of the trained model by visualizing prediction results on test images.
+
+Using the **best-performing model obtained during training**, 10 images are randomly sampled from the test dataset and inference results are visualized to assess model behavior beyond numerical metrics.
+
+### Visualization Details
+For each selected test image, the following prediction results are overlaid:
+- Bounding boxes
+- Segmentation mask contours
+- Predicted class labels
+- Confidence scores
+
+All images are resized to **800 × 800**, consistent with the training and evaluation settings. Only predictions above a predefined confidence threshold are displayed.
+
+Observations from Visual Inspection
+- **Small tomatoes are sometimes missed**, consistent with the lower AP observed for small objects in the quantitative evaluation.  
+- **Ripeness stages are generally predicted correctly**, but in some images both regular (b_*) and cherry (l_*) tomatoes appear together, making it difficult to clearly distinguish tomato type.  
+- To build a model that reliably classifies **both ripeness and tomato type (regular vs cherry)** in mixed images, further improvements may be needed, such as handling small objects more accurately and incorporating type-specific features.
+
 
 ## 4. Web App
 A FastAPI-based web application can serve the trained model for real-time tomato ripeness classification:
