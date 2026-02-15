@@ -94,17 +94,79 @@ A custom `TomatoDataset` class handles:
 
 
 ## 2. Test Evaluation
-<a href="https://colab.research.google.com/drive/1FauT_oj0B2qi6jVYM8_SDD9yq9yuB2Oc">
+**Notebook**　<a href="https://colab.research.google.com/drive/1FauT_oj0B2qi6jVYM8_SDD9yq9yuB2Oc">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" />
 </a>
 
-This notebook evaluates the trained model on the held-out test dataset:
-Loads test images, COCO-style annotations, and the best trained checkpoint.
-Applies consistent preprocessing and dataset handling as in training.
-Computes COCO-style metrics:
-Bounding box mAP
-Segmentation mask mAP
-Provides class-wise and object-size-wise performance analysis.
+This notebook evaluates the trained 6-class Mask R-CNN model on a held-out test dataset using COCO-style metrics.
+
+### Test Dataset
+- **161 test images**, separated from the training data
+- COCO-style JSON annotations
+- The same preprocessing as training/validation is applied to ensure consistency:
+  - EXIF orientation correction
+  - Image resizing to **800 × 800**
+  - Bounding boxes and segmentation masks are scaled accordingly
+- **No data augmentation** is applied during testing
+
+### Test Dataset Definition
+A custom `TomatoDataset` class is used for the test set, mirroring the training dataset implementation:
+- Image loading and preprocessing
+- Annotation parsing
+- Bounding box and mask generation
+- Image, box, and mask resizing to **800 × 800**
+- Output format compatible with Mask R-CNN
+
+### Model Loading
+- Mask R-CNN with a ResNet-50 FPN backbone
+- Classification and mask heads configured for **6 classes + background**
+- The best-performing checkpoint selected during validation is loaded
+- Model is evaluated in inference mode (`model.eval()`)
+
+### Evaluation Metrics
+The model is evaluated using **COCO-style metrics**, including:
+- Bounding box Average Precision (bbox mAP)
+- Segmentation mask Average Precision (mask mAP)
+- Metrics averaged over IoU thresholds **0.50–0.95**
+- Performance analyzed by **object size** (small / medium / large)
+
+### Overall Test Results
+
+**Bounding Box (bbox) mAP**
+- AP @[IoU=0.50:0.95]: **0.623**
+- AP @[IoU=0.50]: **0.816**
+- AP @[IoU=0.75]: **0.703**
+
+**Segmentation Mask mAP**
+- AP @[IoU=0.50:0.95]: **0.637**
+- AP @[IoU=0.50]: **0.807**
+- AP @[IoU=0.75]: **0.720**
+
+### Class-wise Average Precision (Test Set)
+
+| Class              | AP     |
+|--------------------|--------|
+| b_fully_ripened    | 0.3584 |
+| b_half_ripened     | 0.3169 |
+| b_green            | 0.1504 |
+| l_fully_ripened    | 0.1637 |
+| l_half_ripened     | 0.2464 |
+| l_green            | 0.0651 |
+
+### Performance by Object Size (Bounding Box)
+
+| Object Size | AP     |
+|-------------|--------|
+| Small       | 0.0138 |
+| Medium      | 0.1688 |
+| Large       | 0.3250 |
+
+*Object sizes follow the COCO definition (small / medium / large).*
+
+### Observations
+- The model performs well on **medium and large tomatoes**.
+- Performance on **small objects** is significantly lower, particularly for cherry tomatoes.
+- This indicates that **small bounding box detection remains a key challenge** and an important area for future improvement.
 
 ## 3. Visual Check
 <a href="https://colab.research.google.com/drive/16I_pJ5Baph34w2O2cy7T77NDGboPzF7s">
