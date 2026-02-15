@@ -72,11 +72,15 @@ A custom `TomatoDataset` class handles:
   - Segmentation mask mAP
 
 ### Results
-- Final epoch validation performance:
-  - **Bounding box mAP:** `XX.XX`
-  - **Segmentation mask mAP:** `XX.XX`
-  - **Total loss:** `X.XXXX`
+- Final (10th) epoch performance:
+  - **Training loss:** `0.3673`
+  - **Validation bounding box mAP:** `0.6710`
+  - **Validation segmentation mask mAP:** `0.6832`
+
+*Note: The loss is computed on the training set, while mAP metrics are evaluated on the validation set.*
+
 - Training loss and validation mAP are plotted over epochs.
+  
 
 ### Output
 - The best-performing model checkpoint is saved and used for test evaluation and deployment.
