@@ -1,6 +1,7 @@
 # Tomato Ripeness Classification
 
-This project implements a tomato ripeness classification system using Mask R-CNN. The model detects tomatoes in images and classifies them into six ripeness categories. It includes dataset preparation, model training, evaluation, and a web application for inference.
+This project implements a tomato ripeness classification system using Mask R-CNN. The model detects tomatoes in images and classifies them into six ripeness categories. The dataset used is from Laboro Tomato Dataset, and the project covers data preparation, model training, evaluation, and a web application for inference.
+
 
 ## 1. Data Prepataion and training
 Link of Notebook
@@ -8,10 +9,8 @@ Link of Notebook
   <img src="https://colab.research.google.com/assets/colab-badge.svg" />
 </a>
 
-The Best Model
+The notebook prepares the dataset and trains the Mask R-CNN model:
 
-
-The first notebook prepares the dataset and trains the Mask R-CNN model:
 Dataset: Uses images and COCO-style JSON annotations from LaboroTomato, stored on Google Drive.
 Classes: 6 ripeness classes for regular (b) and cherry (l) tomatoes:
 b_fully_ripened
@@ -77,14 +76,15 @@ This section explains how to run the Tomato Ripeness Classification model via a 
 Run the following command:
 ```bash
 uvicorn app:app --reload
-
+```
 After starting, the terminal will display the URL to access the app, e.g.:
 ```bash
 http://127.0.0.1:8000
-
+```
 Open the app in your browser
 Open the displayed URL in your browser.
 Upload tomato images to see the predicted ripeness classes.
+
 Notes
 Make sure the trained model file (best_model_6class.pth) is present in the app folder.
 Ensure your Python environment has all required libraries installed (torch, torchvision, Pillow, FastAPI, etc.).
