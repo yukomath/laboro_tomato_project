@@ -76,10 +76,9 @@ This section explains how to run the Tomato Ripeness Classification model via a 
 
 ### How to Use
 
-1. **Prepare the code and model**
-   https://drive.google.com/drive/folders/1M5ch-lMnK7btZoiY79pVhrRTZzBJu8jl?usp=share_link
-   - Download the application files to your local machine.  
-   - Ensure the folder `tomato_app` (or equivalent) is created.
+1. **Prepare the code and model**  
+   Download the `tomato_app` folder from [Google Drive](https://drive.google.com/drive/folders/1M5ch-lMnK7btZoiY79pVhrRTZzBJu8jl?usp=share_link).  
+   This folder contains all the necessary files for running the web application.
 
 2. **Navigate to the app folder in terminal**
    ```bash
