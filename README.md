@@ -86,46 +86,9 @@ A custom `TomatoDataset` class handles:
 ### Output
 - The best-performing model checkpoint is saved and used for test evaluation and deployment.
 - **Best model:**  
-  [Download link to best model](PUT_YOUR_MODEL_LINK_HERE)
+  [Download link to best model](https://drive.google.com/file/d/188HODfp_RYNznEYvKf0b48vskUmnbdR5/view?usp=share_link)
 
 
-
-Notebook: <a href="https://colab.research.google.com/drive/1T378e23B6nI3bIUCm63hTady4dFLfbjg">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" />
-</a>
-
-The notebook prepares the dataset and trains the Mask R-CNN model:
-
-Dataset: Uses images and COCO-style JSON annotations from LaboroTomato, stored on Google Drive.
-
-Classes: 6 ripeness classes for regular (b) and cherry (l) tomatoes:
-b_fully_ripened
-b_half_ripened
-b_green
-l_fully_ripened
-l_half_ripened
-l_green
-
-Data Exploration: Checks number of images, annotation structure, image resolutions, and class distribution.
-
-Dataset Split: 80% training / 20% validation with fixed random seed for reproducibility.
-
-Custom Dataset: TomatoDataset handles image loading, annotation processing, mask generation, resizing, and safe augmentation (horizontal flip).
-
-Model: Pretrained Mask R-CNN (ResNet-50 FPN backbone) with modified classification and mask heads for 6 classes.
-
-Training:
-Optimizer: SGD with momentum and weight decay
-
-Learning rate scheduler: StepLR
-
-Checkpointing system to resume training and save best model
-
-Evaluation: Uses COCO-style metrics (bounding box mAP and mask mAP) during validation.
-
-Output: Plots training loss and validation mAP over epochs.
-
-The notebook saves the best-performing model for further evaluation.
 
 
 ## 2. Test Evaluation
