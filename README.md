@@ -4,8 +4,7 @@ This project implements a tomato ripeness classification system using Mask R-CNN
 
 
 ## 1. Data Prepataion and training
-Link of Notebook
-<a href="https://colab.research.google.com/drive/1T378e23B6nI3bIUCm63hTady4dFLfbjg">
+Notebook: <a href="https://colab.research.google.com/drive/1T378e23B6nI3bIUCm63hTady4dFLfbjg">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" />
 </a>
 
