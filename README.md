@@ -152,20 +152,24 @@ The model is evaluated using **COCO-style metrics**, including:
 | l_half_ripened     | 0.2464 |
 | l_green            | 0.0651 |
 
+
 ### Performance by Object Size (Bounding Box)
 
-| Object Size | AP     |
-|-------------|--------|
-| Small       | 0.0138 |
-| Medium      | 0.1688 |
-| Large       | 0.3250 |
+| Object Size | AP     | COCO Area Range (px²) | Approx. Area Ratio (800×800 image) |
+|-------------|--------|------------------------|-------------------------------------|
+| Small       | 0.0138 | < 1,024                | < 0.16%                             |
+| Medium      | 0.1688 | 1,024 – 9,216          | 0.16% – 1.44%                       |
+| Large       | 0.3250 | > 9,216                | > 1.44%                             |
 
-*Object sizes follow the COCO definition (small / medium / large).*
+*Object sizes follow the COCO definition　(small / medium / large).  
+Area ratios are computed relative to the resized image resolution (800 × 800 = 640,000 px²).*
+
 
 ### Observations
 - The model performs well on **medium and large tomatoes**.
 - Performance on **small objects** is significantly lower, particularly for cherry tomatoes.
 - This indicates that **small bounding box detection remains a key challenge** and an important area for future improvement.
+  
 
 ## 3. Visual Check
 <a href="https://colab.research.google.com/drive/16I_pJ5Baph34w2O2cy7T77NDGboPzF7s">
@@ -216,7 +220,4 @@ Ensure your Python environment has all required libraries installed (torch, torc
 All notebooks are designed to run in Google Colab with mounted Google Drive for data storage.
 Training is checkpoint-resumable for robust experimentation.
 The pipeline supports scalable evaluation and deployment-ready model export.
-
-### Future Work 
-The model shows lower accuracy for small bounding boxes, indicating potential for improvement.
 
