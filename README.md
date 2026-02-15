@@ -80,7 +80,8 @@ A custom `TomatoDataset` class handles:
 *Note: The loss is computed on the training set, while mAP metrics are evaluated on the validation set.*
 
 - Training loss and validation mAP are plotted over epochs.
-  
+  <img width="989" height="390" alt="image" src="https://github.com/user-attachments/assets/119f55da-0292-42bc-a93f-72eb86def7c3" />
+
 
 ### Output
 - The best-performing model checkpoint is saved and used for test evaluation and deployment.
