@@ -94,7 +94,7 @@ A custom `TomatoDataset` class handles:
 
 
 ## 2. Test Evaluation
-** Notebook: **　<a href="https://colab.research.google.com/drive/1FauT_oj0B2qi6jVYM8_SDD9yq9yuB2Oc">
+**Notebook:**　<a href="https://colab.research.google.com/drive/1FauT_oj0B2qi6jVYM8_SDD9yq9yuB2Oc">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" />
 </a>
 
