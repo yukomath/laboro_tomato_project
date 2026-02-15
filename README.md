@@ -238,8 +238,11 @@ uvicorn app:app --reload
 http://127.0.0.1:8000
 ```
 Open the displayed URL in your browser.
+<img width="1280" height="832" alt="スクリーンショット 2026-02-15 20 47 04" src="https://github.com/user-attachments/assets/766693d4-2ce6-4806-a57e-64bed6fb1481" />
 
 5. Upload tomato images to see the predicted ripeness classes.
+<img width="1280" height="832" alt="スクリーンショット 2026-02-15 20 47 30" src="https://github.com/user-attachments/assets/8b67af20-cd17-416d-a548-0007559e917e" />
+
 
 ### Notes
 Make sure the trained model file (best_model_6class.pth) is present in the app folder.
