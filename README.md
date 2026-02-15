@@ -89,7 +89,7 @@ Run the following command:
 ```bash
 uvicorn app:app --reload
 ```
-4. After starting, the terminal will display the URL to access the app,:
+4. After starting, the terminal will display the URL to access the app, e.g.:
 ```bash
 http://127.0.0.1:8000
 ```
