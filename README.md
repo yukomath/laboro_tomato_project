@@ -47,8 +47,8 @@ A custom `TomatoDataset` class handles:
 - Image loading and preprocessing
 - Annotation parsing
 - Mask generation
-- Image resizing
-- Optional data augmentation
+- Image resizing　to **800 × 800**
+- Optional data augmentation (flip and rotation)
 
 ### Data Augmentation
 - Horizontal flip and rotation were initially evaluated.
