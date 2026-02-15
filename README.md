@@ -11,10 +11,17 @@ This project implements a tomato ripeness classification system using Mask R-CNN
 
 This notebook prepares the dataset and trains a Mask R-CNN model for tomato ripeness classification.
 
+
 ### Dataset
 - Images and COCO-style JSON annotations from the  
   [Laboro Tomato Dataset](https://github.com/laboroai/LaboroTomato), stored on Google Drive.
+- The dataset consists of:
+  - **643 images** for training
+  - **161 images** for testing
+- Images in the **training folder** are further split into **training and validation sets**.
 - **EXIF orientation correction** is applied during image loading to ensure correct image alignment (critical for stable training).
+
+
 
 ### Classes
 Six ripeness classes for regular (`b`) and cherry (`l`) tomatoes:
