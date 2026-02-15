@@ -3,7 +3,80 @@
 This project implements a tomato ripeness classification system using Mask R-CNN. The model detects tomatoes in images and classifies them into six ripeness categories. The dataset used is from [Laboro Tomato Dataset](https://github.com/laboroai/LaboroTomato), and the project covers data preparation, model training, evaluation, and a web application for inference.
 
 
-## 1. Data Prepataion and training
+## 1. Data Preparation and Training
+
+**Notebook:** <a href="https://colab.research.google.com/drive/1T378e23B6nI3bIUCm63hTady4dFLfbjg">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" />
+</a>
+
+This notebook prepares the dataset and trains a Mask R-CNN model for tomato ripeness classification.
+
+### Dataset
+- Images and COCO-style JSON annotations from the  
+  [Laboro Tomato Dataset](https://github.com/laboroai/LaboroTomato), stored on Google Drive.
+- **EXIF orientation correction** is applied during image loading to ensure correct image alignment (critical for stable training).
+
+### Classes
+Six ripeness classes for regular (`b`) and cherry (`l`) tomatoes:
+- `b_fully_ripened`
+- `b_half_ripened`
+- `b_green`
+- `l_fully_ripened`
+- `l_half_ripened`
+- `l_green`
+
+### Data Exploration
+- Number of images and annotations
+- Annotation structure
+- Image resolutions
+- Class distribution
+
+### Dataset Split
+- 80% training / 20% validation
+- Fixed random seed for reproducibility
+
+### Custom Dataset
+A custom `TomatoDataset` class handles:
+- Image loading and preprocessing
+- Annotation parsing
+- Mask generation
+- Image resizing
+- Optional data augmentation
+
+### Data Augmentation
+- Horizontal flip and rotation were initially evaluated.
+- Rotation augmentation degraded mAP performance.
+- Horizontal flip showed minimal impact on performance.
+- **As a result, no data augmentation is used in the final model.**
+
+### Model
+- Pretrained **Mask R-CNN** with a **ResNet-50 FPN** backbone
+- Classification and mask heads modified for 6 ripeness classes
+
+### Training
+- Optimizer: SGD with momentum and weight decay
+- Learning rate scheduler: StepLR
+- Checkpointing system to resume training and save the best-performing model
+
+### Evaluation
+- COCO-style metrics during validation:
+  - Bounding box mAP
+  - Segmentation mask mAP
+
+### Results
+- Final epoch validation performance:
+  - **Bounding box mAP:** `XX.XX`
+  - **Segmentation mask mAP:** `XX.XX`
+  - **Total loss:** `X.XXXX`
+- Training loss and validation mAP are plotted over epochs.
+
+### Output
+- The best-performing model checkpoint is saved and used for test evaluation and deployment.
+- **Best model:**  
+  [Download link to best model](PUT_YOUR_MODEL_LINK_HERE)
+
+
+
 Notebook: <a href="https://colab.research.google.com/drive/1T378e23B6nI3bIUCm63hTady4dFLfbjg">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" />
 </a>
