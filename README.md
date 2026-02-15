@@ -3,11 +3,13 @@
 This project implements a tomato ripeness classification system using Mask R-CNN. The model detects tomatoes in images and classifies them into six ripeness categories. It includes dataset preparation, model training, evaluation, and a web application for inference.
 
 ## 1. Data Prepataion and training
+Link of Notebook
 <a href="https://colab.research.google.com/drive/1T378e23B6nI3bIUCm63hTady4dFLfbjg">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" />
 </a>
 
 The Best Model
+
 
 The first notebook prepares the dataset and trains the Mask R-CNN model:
 Dataset: Uses images and COCO-style JSON annotations from LaboroTomato, stored on Google Drive.
@@ -59,6 +61,33 @@ Users upload images.
 The app returns predicted ripeness for detected tomatoes with bounding boxes and masks.
 Useful for farm monitoring, sorting, or quality control workflows.
 
+This section explains how to run the Tomato Ripeness Classification model via a simple web application.
+
+### How to Use
+
+1. **Prepare the code and model**
+   - Download the application files to your local machine.  
+   - Ensure the folder `tomato_app` (or equivalent) is created.
+
+2. **Navigate to the app folder in terminal**
+   ```bash
+   cd tomato_app
+
+3. Start the web application
+Run the following command:
+```bash
+uvicorn app:app --reload
+
+After starting, the terminal will display the URL to access the app, e.g.:
+```bash
+http://127.0.0.1:8000
+
+Open the app in your browser
+Open the displayed URL in your browser.
+Upload tomato images to see the predicted ripeness classes.
+Notes
+Make sure the trained model file (best_model_6class.pth) is present in the app folder.
+Ensure your Python environment has all required libraries installed (torch, torchvision, Pillow, FastAPI, etc.).
 
 Additional Notes
 All notebooks are designed to run in Google Colab with mounted Google Drive for data storage.
