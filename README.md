@@ -94,7 +94,7 @@ A custom `TomatoDataset` class handles:
 
 
 ## 2. Test Evaluation
-**Notebook**　<a href="https://colab.research.google.com/drive/1FauT_oj0B2qi6jVYM8_SDD9yq9yuB2Oc">
+** Notebook: **　<a href="https://colab.research.google.com/drive/1FauT_oj0B2qi6jVYM8_SDD9yq9yuB2Oc">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" />
 </a>
 
@@ -107,7 +107,6 @@ This notebook evaluates the trained 6-class Mask R-CNN model on a held-out test 
   - EXIF orientation correction
   - Image resizing to **800 × 800**
   - Bounding boxes and segmentation masks are scaled accordingly
-- **No data augmentation** is applied during testing
 
 ### Test Dataset Definition
 A custom `TomatoDataset` class is used for the test set, mirroring the training dataset implementation:
