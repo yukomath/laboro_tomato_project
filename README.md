@@ -12,6 +12,7 @@ Link of Notebook
 The notebook prepares the dataset and trains the Mask R-CNN model:
 
 Dataset: Uses images and COCO-style JSON annotations from LaboroTomato, stored on Google Drive.
+
 Classes: 6 ripeness classes for regular (b) and cherry (l) tomatoes:
 b_fully_ripened
 b_half_ripened
@@ -19,16 +20,26 @@ b_green
 l_fully_ripened
 l_half_ripened
 l_green
+
 Data Exploration: Checks number of images, annotation structure, image resolutions, and class distribution.
+
 Dataset Split: 80% training / 20% validation with fixed random seed for reproducibility.
+
 Custom Dataset: TomatoDataset handles image loading, annotation processing, mask generation, resizing, and safe augmentation (horizontal flip).
+
 Model: Pretrained Mask R-CNN (ResNet-50 FPN backbone) with modified classification and mask heads for 6 classes.
+
 Training:
 Optimizer: SGD with momentum and weight decay
+
 Learning rate scheduler: StepLR
+
 Checkpointing system to resume training and save best model
+
 Evaluation: Uses COCO-style metrics (bounding box mAP and mask mAP) during validation.
+
 Output: Plots training loss and validation mAP over epochs.
+
 The notebook saves the best-performing model for further evaluation.
 
 
@@ -49,6 +60,7 @@ Provides class-wise and object-size-wise performance analysis.
 <a href="https://colab.research.google.com/drive/16I_pJ5Baph34w2O2cy7T77NDGboPzF7s">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" />
 </a>
+
 This notebook provides a visual inspection of the model predictions:
 Displays sample images from test set.
 Overlays predicted bounding boxes and masks with confidence scores.
@@ -85,11 +97,15 @@ Open the app in your browser
 Open the displayed URL in your browser.
 Upload tomato images to see the predicted ripeness classes.
 
-Notes
+### Notes
 Make sure the trained model file (best_model_6class.pth) is present in the app folder.
 Ensure your Python environment has all required libraries installed (torch, torchvision, Pillow, FastAPI, etc.).
 
-Additional Notes
+### Additional Notes 
 All notebooks are designed to run in Google Colab with mounted Google Drive for data storage.
 Training is checkpoint-resumable for robust experimentation.
 The pipeline supports scalable evaluation and deployment-ready model export.
+
+### Future Work 
+The model shows lower accuracy for small bounding boxes, indicating potential for improvement.
+
