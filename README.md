@@ -77,6 +77,7 @@ This section explains how to run the Tomato Ripeness Classification model via a 
 ### How to Use
 
 1. **Prepare the code and model**
+   https://drive.google.com/drive/folders/1M5ch-lMnK7btZoiY79pVhrRTZzBJu8jl?usp=share_link
    - Download the application files to your local machine.  
    - Ensure the folder `tomato_app` (or equivalent) is created.
 
@@ -89,13 +90,13 @@ Run the following command:
 ```bash
 uvicorn app:app --reload
 ```
-After starting, the terminal will display the URL to access the app, e.g.:
+4. After starting, the terminal will display the URL to access the app,:
 ```bash
 http://127.0.0.1:8000
 ```
-Open the app in your browser
 Open the displayed URL in your browser.
-Upload tomato images to see the predicted ripeness classes.
+
+5. Upload tomato images to see the predicted ripeness classes.
 
 ### Notes
 Make sure the trained model file (best_model_6class.pth) is present in the app folder.
