@@ -189,16 +189,16 @@ For each selected test image, the following prediction results are overlaid:
 
 All images are resized to **800 × 800**, consistent with the training and evaluation settings. Only predictions above a predefined confidence threshold are displayed.
 
-<img width="636" height="658" alt="Unknown" src="https://github.com/user-attachments/assets/cc9825ea-afd7-401b-a3ac-de4b295dd448" />
-<img width="636" height="658" alt="Unknown-1" src="https://github.com/user-attachments/assets/cf0db4ba-f9b2-4edc-8d29-65a371a0d8ed" />
-<img width="636" height="658" alt="Unknown-2" src="https://github.com/user-attachments/assets/226ba178-aced-41b3-905d-d2de9af7a769" />
-<img width="685" height="658" alt="Unknown-3" src="https://github.com/user-attachments/assets/c5c799aa-fc2d-4376-80bd-c46ca7083e13" />
-<img width="636" height="658" alt="Unknown-4" src="https://github.com/user-attachments/assets/9dd7a709-154b-48b2-a645-a64815ca1541" />
-<img width="659" height="658" alt="Unknown-5" src="https://github.com/user-attachments/assets/9dcdb930-78e7-409b-b7c0-34a71c38a70e" />
-<img width="646" height="658" alt="Unknown-6" src="https://github.com/user-attachments/assets/0277a7a8-6572-4075-a73d-f3317952758b" />
-<img width="636" height="658" alt="Unknown-7" src="https://github.com/user-attachments/assets/c47ae38e-08ff-412d-8e13-aafc3909098c" />
-<img width="644" height="658" alt="Unknown-8" src="https://github.com/user-attachments/assets/a565509f-6d6c-422d-bd51-a28ada3046d9" />
-<img width="636" height="658" alt="Unknown-9" src="https://github.com/user-attachments/assets/e2c073f2-11e1-4aa6-a9a6-b67cff6d82ae" />
+<img width="300" alt="Unknown" src="https://github.com/user-attachments/assets/cc9825ea-afd7-401b-a3ac-de4b295dd448" />
+<img width="300" alt="Unknown-1" src="https://github.com/user-attachments/assets/cf0db4ba-f9b2-4edc-8d29-65a371a0d8ed" />
+<img width="300" alt="Unknown-2" src="https://github.com/user-attachments/assets/226ba178-aced-41b3-905d-d2de9af7a769" />
+<img width="300" alt="Unknown-3" src="https://github.com/user-attachments/assets/c5c799aa-fc2d-4376-80bd-c46ca7083e13" />
+<img width="300" alt="Unknown-4" src="https://github.com/user-attachments/assets/9dd7a709-154b-48b2-a645-a64815ca1541" />
+<img width="300" alt="Unknown-5" src="https://github.com/user-attachments/assets/9dcdb930-78e7-409b-b7c0-34a71c38a70e" />
+<img width="300" alt="Unknown-6" src="https://github.com/user-attachments/assets/0277a7a8-6572-4075-a73d-f3317952758b" />
+<img width="300" alt="Unknown-7" src="https://github.com/user-attachments/assets/c47ae38e-08ff-412d-8e13-aafc3909098c" />
+<img width="300" alt="Unknown-8" src="https://github.com/user-attachments/assets/a565509f-6d6c-422d-bd51-a28ada3046d9" />
+<img width="300" alt="Unknown-9" src="https://github.com/user-attachments/assets/e2c073f2-11e1-4aa6-a9a6-b67cff6d82ae" />
 
 
 
