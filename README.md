@@ -236,31 +236,31 @@ Open the displayed URL in your browser.
 
 <img width="600" alt="スクリーンショット 2026-02-15 20 47 04" src="https://github.com/user-attachments/assets/766693d4-2ce6-4806-a57e-64bed6fb1481" />
 
-<br>
+
 5. Upload tomato images to see the predicted ripeness classes.
 
 <img width="600" alt="スクリーンショット 2026-02-15 20 47 30" src="https://github.com/user-attachments/assets/8b67af20-cd17-416d-a548-0007559e917e" />
 
 
-<br>
+
 **Original Picture**
 
 <img src="https://github.com/user-attachments/assets/2c59fdcd-df07-4928-87b4-dd2371dad9e7" alt="AdobeStock_78043345-768x512" width="600" />
 
 
-<br>
+
 **Sample Output**
 
 <img width="600" alt="Unknown" src="https://github.com/user-attachments/assets/96785648-0bc0-4df0-8092-fd51734c540f" />
 
 
-<br>
+
 **Original Picture**
 
 <img src="https://github.com/user-attachments/assets/21849082-16dd-4a26-8c87-bc7e73fd09fc" alt="tomatoes-1280859_1280" width="600" />
 
 
-<br>
+
 **Sample Output**
 
 <img width="600" alt="Unknownのコピー" src="https://github.com/user-attachments/assets/d9aa2ad2-483f-4cff-8388-fdfff6558f25" />
