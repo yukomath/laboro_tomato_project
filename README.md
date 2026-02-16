@@ -112,19 +112,11 @@ This notebook evaluates the trained 6-class Mask R-CNN model on a held-out test 
   - Image resizing to **800 × 800**
   - Bounding boxes and segmentation masks are scaled accordingly
 
-### Test Dataset Definition
-A custom `TomatoDataset` class is used for the test set, mirroring the training dataset implementation:
-- Image loading and preprocessing
-- Annotation parsing
-- Bounding box and mask generation
-- Image, box, and mask resizing to **800 × 800**
-- Output format compatible with Mask R-CNN
 
-### Model Loading
-- Mask R-CNN with a ResNet-50 FPN backbone
-- Classification and mask heads configured for **6 classes + background**
-- The best-performing checkpoint selected during validation is loaded
-- Model is evaluated in inference mode (`model.eval()`)
+### Model for Evaluation
+- The best-performing model obtained during training is used for evaluation
+- Model architecture and configuration are identical to the training phase
+- The model is loaded in inference mode (model.eval())
 
 ### Evaluation Metrics
 The model is evaluated using **COCO-style metrics**, including:
