@@ -275,3 +275,5 @@ All notebooks are designed to run in Google Colab with mounted Google Drive for 
 Training is checkpoint-resumable for robust experimentation.
 The pipeline supports scalable evaluation and deployment-ready model export.
 
+### Acknowledgements
+Parts of the code and explanations in this project were created with the assistance of ChatGPT by OpenAI.
